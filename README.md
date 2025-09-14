@@ -22,13 +22,13 @@ Check the live website here: [Contact Form](YOUR_VERCEL_LINK_HERE)
 2. Open `index.html` in your browser
 3. Fill out the form and submit
 
-```bash
-git clone git@github.com:MohammedNasser9/contact-form.git
-
-
 ## Technologies Used
 -HTML5
 -CSS3
 -Font Awesome
 
-نسخ الكود
+```bash
+git clone git@github.com:MohammedNasser9/contact-form.git
+
+
+نسخ ال
