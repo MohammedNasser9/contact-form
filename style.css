@@ -1,0 +1,190 @@
+/* Reset default styles */
+* {
+    margin: 0; 
+    padding: 0;
+    outline: none; 
+    border: none;
+    box-sizing: border-box;
+}
+
+/* Remove outline on focus */
+*:focus {
+    outline: none;
+}
+
+/* Define color and size variables */
+:root {
+    --primary-color: #4adeb9;
+    --primary-dark: #30ad9c;
+    --bg-dark: #1a1a1a;
+    --text-light: #f3f4f6;
+    --text-gray: #9ca3af;
+    --card-bg: #252525;
+    --input-bg: #333;
+    --border-radius: 10px;
+}
+
+/* Basic body layout and styling */
+body {
+    font-family: 'Poppins';
+    min-height: 100vh;
+    background: var(--bg-dark);
+    padding: 20px 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main form container */
+.form-container {
+    background: var(--card-bg);
+    padding: 20px min(5%, 30px) 0;
+    width: min(100%, 800px);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    animation: fiedIn .3s forwards;
+}
+
+/* Fade-in animation */
+@keyframes fiedIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form title */
+.form-container > h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+/* Form description */
+.form-container > p {
+    color: var(--text-gray);
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* Form layout using flexbox */
+.form-container form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Input wrapper */
+.form-container form .input {
+    flex: 1 1 300px;
+    position: relative;
+}
+
+/* Icon inside input */
+.form-container form .input i {
+    position: absolute;
+    color: var(--primary-color);
+    font-size: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+/* Input and textarea base styles */
+.input input,
+.input textarea {
+    width: 100%;
+    height: 100%;
+    padding: 14px 40px;
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+    background: var(--input-bg);
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: .3s;
+}
+
+/* Placeholder font size */
+.input input::placeholder,
+.input textarea::placeholder {
+    font-size: 16px;
+}
+
+/* Focus effect */
+.input input:focus,
+.input textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.2);
+}
+
+/* Placeholder color */
+.form-container form .input input::placeholder {
+    color: var(--text-gray);
+}
+
+/* Make the last input (textarea) take full width */
+.form-container form .input:last-of-type {
+    flex-basis: 100%;
+}
+
+/* Adjust icon position for textarea */
+.form-container form .input:last-of-type i {
+    top: 25px;
+}
+
+/* Textarea specific styles */
+.form-container form .input textarea {
+    resize: none;
+    height: 130px;
+    overflow-y: auto;
+}
+
+/* Submit button styles */
+form button {
+    flex: 1;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 15px 25px;
+    transition: .3s;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Submit button hover effect */
+form button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(.99) translateY(-2px);
+}
+
+/* Contact details section */
+.form-container .details {
+    border-top: 1px solid #777;
+    margin-top: 30px;
+    border-radius: .5px;
+    padding-top: 25px;
+}
+
+/* Individual contact item */
+.form-container .details > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Icon in contact item */
+.form-container .details > div i {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+/* Text in contact item */
+.form-container .details > div p {
+    color: var(--text-gray);
+    font-size: 14px;
+}
