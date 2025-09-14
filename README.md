@@ -16,19 +16,17 @@ Check the live website here: [Contact Form](YOUR_VERCEL_LINK_HERE)
 - Smooth focus and hover effects
 - Submit button with icon animation
 
+## Technologies Used
+-HTML5
+-CSS3
+-Font Awesome
+
 ## Usage
 
 1. Clone or download this repository
 2. Open `index.html` in your browser
 3. Fill out the form and submit
 
-## Technologies Used
--HTML5
--CSS3
--Font Awesome
 
 ```bash
 git clone git@github.com:MohammedNasser9/contact-form.git
-
-
-نسخ ال
